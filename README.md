@@ -1,5 +1,5 @@
-# family_finances_management
-- can be used to track our gamily member finances<br>
+# user_finances_tracker
+- can be used to track our user finances<br>
 - CRUD operations using sqlite3<br>
 #tech used :
     - sqlite3
