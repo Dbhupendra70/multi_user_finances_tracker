@@ -115,7 +115,7 @@ def view_transaction_history(user_id):
         print(transaction)
 
 # User Interaction Functions
-def existing_user_menu():
+def user_menu():
     """Display menu for existing user functionalities."""
     user_id = input("Enter your User ID: ")
 
