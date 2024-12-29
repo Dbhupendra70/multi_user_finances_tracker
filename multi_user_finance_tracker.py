@@ -127,7 +127,7 @@ def existing_user_menu():
         return
 
     while True:
-        print("\n|-|-| Existing User Menu |-|-|\n")
+        print("\n|-|🙂| User Menu |🙂|-|\n")
         print("1. Deposit Amount")
         print("2. Withdraw Amount")
         print("3. View Balance")
@@ -151,18 +151,15 @@ def existing_user_menu():
             case _:
                 print("\nInvalid input. Please select a valid option.")
 
-# Main Menu Function
-def main():
-    """Main program loop displaying the general menu."""
-    while True:
-        print("\nFamily Finance Management")
-        print("\n------ MENU -------\n")
-        print("1. List Existing Users")
+#admin menu
+def Admin_menu():
+    while True :
+        print("\n\n 😎  Admin menu  😎 \n")
+        print("1. List All Existing Users")
         print("2. Add a New User")
-        print("3. Access your account")
-        print("4. Update Existing User Details")
-        print("5. Delete User")
-        print("6. Exit")
+        print("3. Update Existing User Details")
+        print("4. Delete User")
+        print("5. Exit")
         choice = input("\nEnter your choice: ")
 
         match choice:
@@ -171,19 +168,41 @@ def main():
             case '2':
                 add_user()
             case '3':
-                existing_user_menu()
-            case '4':
                 update_user()
-            case '5':
+            case '4':
                 delete_user()
-            case '6':
-                print("\nThanks for using our program :)\n")
+            case '5':
+                print("\nOK :)\n")
                 break
             case _:
                 print("Invalid input.")
 
     con.close()
 
+# Main Menu Function
+def main():
+    """Main program loop displaying the general menu."""
+    while True:
+        print("\n*-*-* MAIN MENU *-*-*\n")
+        print("1. ADMIN Menu 😎")
+        print("2. USER Menu 🙂")
+        print("3. Exit")
+
+        choice = input("\nEnter your choice: ")
+
+        match choice:
+            case '1':
+                Admin_menu()
+            case '2':
+                user_menu()
+            case '3':
+                print("\nSO bye :)\n")
+                break
+            case _:
+                print("Invalid input.")
+
+    con.close()
 # Program Entry Point
 if __name__ == "__main__":
+    print("\nLiTE Finance Management")
     main()
